@@ -332,14 +332,14 @@ const hopefullyLastTimeline = gsap.timeline({
     }
 })
 
-const textsThird = document.querySelectorAll(".sticky-text div")
+const textsThird = document.querySelectorAll(".sticky-text > div")
 
-    textsThird.forEach( items => {
-        hopefullyLastTimeline.from(items, {
-            x: "-100%",
-            // duration: 1,
+        textsThird.forEach( items => {
+            hopefullyLastTimeline.from(items, {
+                width: "150vw"
+                // duration: 1,
+            })
         })
-    })
 
 
 // animating the third div
