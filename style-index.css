@@ -89,6 +89,11 @@ body {
     right: 52px;
 }
 
+#menu a{
+    color: white;
+    text-decoration: none;
+}
+
 .video-div {
     width: 100vw;
     height: 100vh;
@@ -123,18 +128,17 @@ body {
 
     /* padding-left: 15vw; */
     background-color: black;
+    position: relative;
 
 
 }
 
-
-
-.second>div:first-child {
+.second>div:nth-child(1) {
     /* font-family: "Explora", serif; */
     font-size: 4vw;
     height: 100px;
 
-    color: white;
+    color: yellow;
 
 
 }
@@ -232,7 +236,7 @@ section {
     font-size: 5vw;
     overflow: hidden;
 
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
 
 }
 
@@ -254,7 +258,7 @@ section {
 
 
     gap: 2vw;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
     /* background-color: var(--main-color); */
@@ -284,4 +288,45 @@ section {
 .third {
     width: 100%;
     height: 100vh;
+    background-color: whitesmoke;
+    color: var(--main-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.third >div{
+    width: 40vw;
+    height: 90vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2vh 5vw;
+    overflow: hidden;
+}
+
+.third h1{
+    font-size: 3vw;
+    /* overflow: hidden; */
+    border: none;
+    overflow: hidden;
+}
+.third > div:first-child > p{
+    font-weight: bold;
+    display: inline-block;
+    margin: 4px 0;
+    /* border: 1px solid black; */
+}
+
+.third > div:first-child > div{
+    width:   100%;
+    height: 50%;
+    /* border: 1px solid black; */
+}
+.third > div:first-child > div > img{
+    width: 100%;
+    height: 100%;   
+    object-fit: contain;
 }

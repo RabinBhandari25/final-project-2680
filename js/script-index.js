@@ -188,7 +188,7 @@ pSecond.innerHTML = splitToSpan_NOUPPERCASE(pSecond.innerHTML.split(""))
 
 
 gsap.to(".wrapper-for-second p span",{
-    color: "white",
+    color: "yellow",
     // borderBottom: "2px solid gray",
     stagger: 0.1,
     scrollTrigger: {
@@ -202,7 +202,7 @@ gsap.to(".wrapper-for-second p span",{
 
 ScrollTrigger.create({
     trigger: ".second",
-    start: "top -20%",
+    start: "top 0%",
     end: "bottom 0%", 
     pin: true,
     pinSpacing: true,
@@ -278,7 +278,6 @@ const scroll = gsap.timeline({
         start: "top top",
         end: () => `+=${ window.innerHeight * ( totalCards - 1 )}`,
         pin: true,
-        markers: true,
         // stagger: true,
         scrub: 0.5,
     }
@@ -335,10 +334,47 @@ const hopefullyLastTimeline = gsap.timeline({
 
 const textsThird = document.querySelectorAll(".sticky-text div")
 
-textsThird.forEach( items => {
-    hopefullyLastTimeline.from(items, {
-        x: "-100%",
-        // duration: 1,
+    textsThird.forEach( items => {
+        hopefullyLastTimeline.from(items, {
+            x: "-100%",
+            // duration: 1,
+        })
+    })
+
+
+// animating the third div
+
+const allh1InThird = document.querySelectorAll(".third h1")
+const allPInThird = document.querySelectorAll(".third P")
+
+
+
+allh1InThird.forEach( item =>{
+    gsap.from(item, {
+        y: -200,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: ".third",
+            start: "top 30%",
+            end: "center 40%",
+            scrub: true,
+
+        }
+    })
+})
+allPInThird.forEach( item =>{
+    gsap.from(item, {
+        y: -200,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: ".third",
+            start: "top 30%",
+            end: "bottom 90%",
+            scrub: true,
+
+        }
     })
 })
 
