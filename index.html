@@ -7,21 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Dancing+Script:wght@400..700&family=Eagle+Lake&family=Estonia&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monsieur+La+Doulaise&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style-index.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Dancing+Script:wght@400..700&family=Eagle+Lake&family=Estonia&family=Explora&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monsieur+La+Doulaise&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="reset.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style-index.css">
+    <title>EVEREST KITCHEN</title>
 </head>
 
 <body>
@@ -30,47 +19,90 @@
 
     <div id="cursor" class="blur"></div>
 
+    <nav>
+        <h1>Everest Kitchen</h1>
+        <div><i class="fa-solid fa-list"></i></div>
+    </nav>
+    <div id="menu" class="blur">
+        <h4>Work</h4>
+        <h4>Services</h4>
+        <h4>About</h4>
+        <h4>Gallery</h4>
+        <h4> <a href="aboutus.html">About Us</a></h4>
+
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <!--  our first div -->
     <div class="first">
-        <nav>
-            <h1>Everest Kitchen</h1>
-            <div><i class="fa-solid fa-list"></i></div>
-        </nav>
         <h1>spiced</h1>
         <h1>NEPAL SERVED</h1>
-        <div id="menu" class="blur">
-            <h4>Work</h4>
-            <h4>Services</h4>
-            <h4>About</h4>
-            <h4>Gallery</h4>
-            <h4> <a href="aboutus.html">About Us</a></h4>
-
-            <i class="fa-solid fa-xmark"></i>
-        </div>
     </div>
 
     <div class="video-div">
-        <video autoplay loop muted src="video/eat_web.mp4"></video>
+        <!-- <video autoplay loop muted src='https://youtu.be/IXkOQemjSOs'></video> -->
+        <iframe width="100%" height="100%"
+            src="https://www.youtube.com/embed/IXkOQemjSOs?autoplay=1&mute=1&controls=0&loop=1&playlist=IXkOQemjSOs"
+            frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
     </div>
 
 
-        <div class="second">
-            <div>
-                EVERST KITCHEN
-            </div>
+
+
+    <div class="second">
+        <div>
+            <img src="./images/secondBackdropPic.png" alt="">
+        </div>
+        <div>
+            <h1>EVEREST KITCHEN</h1>
             <svg>
-                <path stroke="yellow" fill="transparent" />
+                <path stroke="black" fill="transparent" stroke-width="5" />
             </svg>
-            <div class="wrapper-for-second">
-                <p>Welcome at To Linden, where enjoyment begins and Connection arises. At us goes to the Feeling, Exactly a
-                    correct Location to be. To honest Kitchen, the with care arises. To Host, the itself really take care
-                    and to Moments, the man not plans but gladly repeat want. Here meet People on Quality, on Warmth, on
-                    the, What remains.</p>
+            <div>
+                <p>Welcome to Everest Kitchen, where enjoyment begins and Connection arises. At us goes to the Feeling,
+                    Exactly a correct Location to be. To honest Kitchen, the with care arises. To Host, the itself
+                    really take care and to Moments, the man not plans but gladly repeat want. Here meet People on
+                    Quality, on Warmth, on the, What remains.</p>
             </div>
         </div>
-    
+    </div>
 
 
 
+    <section class="work-item">
+        <div class="work-item-img"><img src="./images/NepaliFood1.avif" alt=""></div>
+        <div class="work-item-name">
+            <h1 class="blur">“Spiced Tradition — Pure Nepali flavors, untouched by fusion trends or modern shortcuts.”
+            </h1>
+        </div>
+    </section>
+    <section class="work-item">
+        <div class="work-item-img"><img src="./images/NepaliFood2.avif" alt=""></div>
+        <div class="work-item-name">
+            <h1 class="blur">"Experience the fusion of modern culinary creativity with authentic Nepali flavors that
+                delight food enthusiasts."</h1>
+        </div>
+    </section>
+    <section class="work-item">
+        <div class="work-item-img"><img src="./images/nepaliResturant.webp" alt=""></div>
+        <div class="work-item-name">
+            <h1 class="blur">“Himalayan Escape — Big mountain flavors, raw, rugged, and impossible to forget.”</h1>
+        </div>
+    </section>
+    <!-- <section class="work-item">
+            <div class="work-item-img"><img src="./images/NepaliFood3.avif" alt=""></div>
+            <div class="work-item-name">
+                <h1 class="blur">“Heritage Taste — Bold Nepali flavors rooted in history, preserved with pride.”</h1>
+            </div>
+        </section> -->
+    <!-- <section class="work-item">
+            <div class="work-item-img"><img src="./images/NepaliFood4.png" alt=""></div>
+            <div class="work-item-name">
+                <h1 class="blur">“Authentic Bite — Classic Nepali dishes refined without losing their true taste.”</h1>
+            </div>
+        </section> -->
 
     <div id="container-for-loop-banner">
         <div id="move">
@@ -94,34 +126,6 @@
     </div>
 
 
-
-        <section class="sticky-cards">
-            <div class="sticky-text">
-                <div id="sticky-text-1"> <div>SPICED</div> <div>TRADITION</div></div>
-                <div id="sticky-text-2"> <div>MOUNTAIN</div> <div>FLAVOURS</div></div>
-                <div id="sticky-text-3"> <div>HIMALAYAN</div>  <div>ESCAPE</div></div>
-                <div id="sticky-text-4"> <div>HERITAGE</div> <div>TASTE</div></div>
-                <div id="sticky-text-5"> <div>AUTHENTIC</div> <div>BITE</div></div>
-            </div>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="./images/NepaliFood1.avif" alt="">
-                </div>
-                <div class="card">
-                    <img src="./images/NepaliFood2.avif" alt="">
-                </div>
-                <div class="card">
-                    <img src="./images/locationView.avif" alt="">
-                </div>
-                <div class="card">
-                    <img src="./images/NepaliFood3.avif" alt="">
-                </div>
-                <div class="card">
-                    <img src="./images/NepaliFoof4.png" alt="">
-                </div>
-            </div>
-        </section>
-
     <div class="third">
         <div>
             <h1>Delightful Cusinies To Statisfy Your Appetite</h1>
@@ -132,14 +136,88 @@
         </div>
         <div>
             <h1>NEPALI MOMO</h1>
-            <p>Dive into the exquisite world of Nepali dumplings, crafted with care and stuffed with a medley of traditional ingredients. Savor the delicate blend of spices and experience the true essence of Nepali street food.</p>
+            <p>Dive into the exquisite world of Nepali dumplings, crafted with care and stuffed with a medley of
+                traditional ingredients. Savor the delicate blend of spices and experience the true essence of Nepali
+                street food.</p>
             <h1>HAKKA FUSION</h1>
-            <p>Immerse yourself in the bold and exciting flavors of Hakka cuisine. Our fusion dishes seamlessly blend Chinese and Indian influences, creating a unique taste that’s both comforting and adventurous.</p>
+            <p>Immerse yourself in the bold and exciting flavors of Hakka cuisine. Our fusion dishes seamlessly blend
+                Chinese and Indian influences, creating a unique taste that’s both comforting and adventurous.</p>
+        </div>
+    </div>
+
+    <div class="forth">
+        <!-- support local farmers
+
+        locally sourced seasonal ingredients -->
+
+
+        <div class="fourth-part1">
+            <div class="image-div-forth">
+                <img src="./images/localFarmerMarket.avif" alt="">
+            </div>
+            <div class="para-div-forth">
+                <h1>Local Goodness</h1>
+                <br>
+                We support local farmers by sourcing our ingredients directly from the people who grow them, not from
+                mass-produced supply chains.
+                This ensures fresher produce, fair pricing, and a stronger connection between our kitchen and the
+                community.
+                Every dish we serve is a commitment to sustaining local agriculture and the families behind it.
+            </div>
+        </div>
+        <div class="fourth-part2">
+            <div class="para-div-forth">
+                <h1>Seasonal Craft</h1>
+                <br>
+                We rely on locally sourced, seasonal ingredients because they deliver better flavor, reduce waste, and
+                support producers in our own community.
+                Using what’s in season forces freshness, keeps our menu honest, and ensures every dish reflects the
+                natural rhythm of local harvests.
+                This approach isn’t a trend — it’s a commitment to quality, sustainability, and real food.
+            </div>
+            <div class="image-div-forth">
+                <img src="./images/seasonalIngrident.avif" alt="">
+            </div>
         </div>
 
     </div>
 
 
+    <footer>
+        <div class="footer-info">
+            <div>
+                <h1>Contact</h1> <br>
+                <a href="tel:+9999999">+9(999)-999-9999</a> <br>
+                <a href="mailto:dumymail@gmail.com">Everest8848@gmail.com</a>
+            </div>
+            <div>
+                <h1>Address</h1> <br>
+                <address>
+                    742 Juniper Ridge Road <br>
+                    Kamloops, BC V2E 3L9 <br>
+                    Canada
+                </address>
+            </div>
+            <div>
+                <h1>Hours</h1> <br>
+                <div> Week days: 10am-10pm</div>
+                <div> Week Ends: 10am-12pm</div>
+            </div>
+            <div>
+                <h1>Current</h1>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="footer-name">
+            Everest
+        </div>
+        <div class="social-media">
+            <div><i class="fa-brands fa-instagram"></i></div>
+            <div><i class="fa-brands fa-facebook"></i></div>
+            <div><i class="fa-brands fa-tiktok"></i></div>
+        </div>
+    </footer>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
@@ -148,7 +226,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
         integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+        integrity="sha512-wOeEC+9qERAzhliwBFPDb6t8TiFFxdxG8vhK/Ygs7TuC44bpg8pg/X2/U/u+0X4fK05wb9id1EIipnF02+CFQw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script-index.js"></script>
+    <script src="js/navAndMenu.js"></script>
 
 </body>
 

@@ -23,7 +23,6 @@ function splitToSpan(element){
     })
     return temp_string
 }
-
 time1.from("nav",{
     y: -200,
     duration: 1,
@@ -53,82 +52,16 @@ time1.from(".first h1 + h1 span", {
 
 //cursor
 
-document.addEventListener("mousemove", (event) => {
+document.addEventListener("pointermove", (event) => {
     gsap.to("#cursor", {
-        x:  event.pageX,
-        y: event.pageY,
+        x:  event.clientX,
+        y: event.clientY,
         duration: 1.4,
         ease: "elastic.out(1,0.3)",
         zIndex: 99
     })
 })
 
-
-//menu
-var menuButton = document.querySelector("nav div")
-var clossButton = document.querySelector("#menu i")
-var navBar = document.querySelector("nav")
-
-
-var time22 = gsap.timeline()
-
-time22.to(navBar, {
-    transform: "translateY(-100%)"
-})
-
-time22.to(".first",{
-    height: "100vh",
-})
-
-time22.to("#menu", {
-    right: 0,
-    duration: 0.5,
-})
-
-time22.from(("#menu h4"),{
-    x: 150,
-    duration: 0.4,
-    stagger: 0.1,
-    opacity: 0,
-})
-time22.from("#menu i", {
-    opacity: 0,
-    rotate: "180deg"
-})
-
-menuButton.addEventListener("click", ()=> {
-    time22.play()
-
-})
-
-clossButton.addEventListener("click", ()=> {
-    time22.reverse()
-})
-
-time22.pause()
-
-
-// adding a border on hover for nav bar
-var menuItems = document.querySelectorAll("#menu h4")
-
-menuItems.forEach((item) =>{
-    item.addEventListener("pointermove",() =>{
-        item.a
-        gsap.to(item,{
-            borderBottom: "2px solid white",
-            duration: 0,
-    
-            
-        })
-    })
-    item.addEventListener("mouseleave", ()=>{
-        gsap.to(item,{
-            borderBottom: 0,
-            duration: 0
-        })
-    })
-
-})
 
 // slider
 window.addEventListener("wheel" , (event) => {
@@ -147,7 +80,7 @@ window.addEventListener("wheel" , (event) => {
         })
         gsap.to("#move", {
             rotate: 1.5,
-            y: -55,
+            y: -40,
             duration: 1,
         })
 
@@ -163,7 +96,7 @@ window.addEventListener("wheel" , (event) => {
         })
         gsap.to("#move", {
             rotate: -1.5,
-            y: 55,
+            y: 40,
             duration: 1,
         })
     }
@@ -182,19 +115,32 @@ function splitToSpan_NOUPPERCASE(element){
     return temp_string
 }
 
-var pSecond = document.querySelector(".wrapper-for-second p")
-pSecond.innerHTML = splitToSpan_NOUPPERCASE(pSecond.innerHTML.split(""))
+gsap.to(".video-div", {
+    scale: 0.8,
+    opacity: 0.5,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".video-div",
+        start: " top top",
+        scrub: true,
+        
+    }
+})
 
 
 
-gsap.to(".wrapper-for-second p span",{
-    color: "yellow",
+var paraInSecond = document.querySelector(".second > div > div > p")
+paraInSecond.innerHTML = splitToSpan_NOUPPERCASE(paraInSecond.innerHTML.split(""))
+
+
+gsap.to(".second > div > div > p > span",{
+    color: "black",
     // borderBottom: "2px solid gray",
     stagger: 0.1,
     scrollTrigger: {
         trigger:".second",
         start: "top top",
-        end: "bottom 0%",
+        end: "bottom 50%",
         scrub: true,
     },
 
@@ -213,7 +159,7 @@ ScrollTrigger.create({
 // animating cursor over video
 
 var cursor = document.querySelector("#cursor")
-var video_element = document.querySelector("video")
+var video_element = document.querySelector("iframe")
 video_element.addEventListener("mouseenter", ()=>{
 
     cursor.innerHTML ="MENU"
@@ -230,16 +176,16 @@ video_element.addEventListener("mouseleave", () =>{
     })
 })
 
-var svg = document.querySelector(".second svg")
+var svg = document.querySelector(".second > div > svg")
 var svgLength = svg.clientWidth
-var svgPathString_initial = `M 7 75 Q ${svgLength/2} 75 ${svgLength -7} 75`
+var svgPathString_initial = `M 7 50 Q ${svgLength / 2} 50 ${svgLength - 7 } 50`
 var svgPathStringDynamic =``
 
-var svgPath = document.querySelector(".second svg path")
+var svgPath = document.querySelector(".second > div > svg> path")
 svgPath.setAttribute("d", svgPathString_initial)
 
 svg.addEventListener( "mousemove", (event) =>{
-    svgPathStringDynamic = `M 7 75 Q ${event.clientX} ${event.clientY} ${svgLength -7} 75`
+    svgPathStringDynamic = `M 7 50 Q ${event.clientX} ${event.clientY} ${svgLength - 7} 50`
 
     gsap.to(svgPath, {
         attr: {d: svgPathStringDynamic}
@@ -257,95 +203,83 @@ svg.addEventListener("mouseleave", ()=> {
     }) 
 })
 
+//
 
+document.fonts.ready.then( () => {
+    gsap.utils.toArray(".work-item").forEach( item => {
+        const img = item.querySelector(".work-item-img")
+        // const nameH1 = item.querySelector(".work-item-name h1")
 
-// photo slide with conatine pin to the screen
-const cards =  document.querySelectorAll(".card")
-const images = document.querySelectorAll(".card img")
-const totalCards = cards.length
+        // const split = SplitText.create(nameH1, {
+        //     type: "chars",  
+        //     mask: "chars",
+        // })
 
-gsap.set( cards[0], { y: "0%", scale: 1, rotation: 0})
-gsap.set( images[0], { scale: 1})
+        // gsap.set(split.chars , {
+        //     y: "125%",
+        // })
 
-    for(let i = 1; i < totalCards; i++ ){
-        gsap.set( cards[i], { y: "100%", scale: 1, rotation: 0})
-        gsap.set( images[i], { scale: 1})
-     }
+        // split.chars.forEach( (char, index) => {
+        //     ScrollTrigger.create({
+        //         trigger: item,
+        //         start: `top+=${index * 25 - 250} top`,
+        //         end: `top+=${index * 25 - 100} top`,
+        //         scrub: 1,
+        //         animation: gsap.fromTo(
+        //             char, {
+        //                 y: "125%"
+        //             },
+        //             {
+        //                 y: "0%",
+        //                 ease: "none",
 
-const scroll = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".sticky-cards",
-        start: "top top",
-        end: () => `+=${ window.innerHeight * ( totalCards - 1 )}`,
-        pin: true,
-        // stagger: true,
-        scrub: 0.5,
-    }
-})
+        //             }
+        //         )
+        //     })
+            
+        // })
 
-for(let i = 0; i < totalCards - 1; i++){
+        ScrollTrigger.create({
+            trigger: item,
+            start: 'top bottom',
+            end: 'top top',
+            scrub: 0.5,
+            animation: gsap.fromTo(
+                img, {
+                    clipPath: "polygon(25% 25%, 75% 40%, 100% 100%, 0% 100%)",
+                },
+                {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                    ease: "none",
+                }
+            )
+        })  
 
-
-    const currentCard = cards[i]
-    const currentImg = images[i]
-    const nextCard = cards[i + 1]
-    const position = i
-
-
-    scroll.to(
-        currentCard, {
-        scale: 0.5,
-        rotation: 10,
-        duration: 1,
-        ease: "none"
-
-    }, position)
-
-
-    scroll.to( 
-        currentImg, {
-        scale: 1.5,
-        duration: 1,
-        ease: "none"
-    }, position )
-
-    scroll.to(
-        nextCard,{
-            y: "0%",
-            duration: 1, 
-            ease: "none"
-
-
-        }, position)
-}
-
-
-
-/// side text
-
-const hopefullyLastTimeline = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".sticky-cards",
-        start: "top top",
-        end: () => `+=${ window.innerHeight * ( totalCards - 1)}`,
-        scrub: true,
-    }
-})
-
-const textsThird = document.querySelectorAll(".sticky-text > div")
-
-        textsThird.forEach( items => {
-            hopefullyLastTimeline.from(items, {
-                width: "150vw"
-                // duration: 1,
-            })
+        ScrollTrigger.create({
+            trigger: item,
+            start: 'bottom bottom',
+            end: 'bottom top',
+            scrub: 0.5,
+            animation: gsap.fromTo(
+                img,
+                {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                },
+                {
+                    clipPath: "polygon(0% 0%, 100% 0%, 75% 60%, 25% 75%)",
+                    ease: "none"
+                }   
+            )
         })
+    })
+})
+
 
 
 // animating the third div
 
 const allh1InThird = document.querySelectorAll(".third h1")
-const allPInThird = document.querySelectorAll(".third P")
+const allPInThird = document.querySelectorAll(".third p")
 
 
 
@@ -356,7 +290,7 @@ allh1InThird.forEach( item =>{
         duration: 0.5,
         scrollTrigger: {
             trigger: ".third",
-            start: "top 30%",
+            start: "top 50%",
             end: "center 40%",
             scrub: true,
 
@@ -370,11 +304,12 @@ allPInThird.forEach( item =>{
         duration: 0.5,
         scrollTrigger: {
             trigger: ".third",
-            start: "top 30%",
+            start: "top 50%",
             end: "bottom 90%",
             scrub: true,
 
         }
     })
 })
+
 

@@ -1,0 +1,70 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    overflow-x: hidden;
+    /* font-family: "Explora", serif; */
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+          
+}
+
+
+.blur{
+    background-color: rgba(255, 255, 255, 0.355);
+    backdrop-filter: blur(16px);
+}
+
+/* every thing below this is style for nav bar and menu bar
+    so for evry page we will add the nav section and apply this style sheet
+*/
+
+#menu {
+
+    height: 100vh;
+    width: 40%;
+    position: absolute;
+    top: 0px;
+    right: -40%;
+
+    padding: 150px 64px;
+    font-size: 4vw;
+    z-index: 12;
+}
+
+#menu h4 {
+    margin: 20px 4px;
+    font-weight: bold;
+}
+
+#menu i {
+    position: absolute;
+    top: 48px;
+    right: 52px;
+}
+
+#menu a{
+    text-decoration: none;
+    color: black;
+}
+
+
+nav {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 2.5vw;
+    z-index: 12;
+}

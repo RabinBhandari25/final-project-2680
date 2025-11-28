@@ -1,0 +1,347 @@
+:root {
+    /* --main-color: rgb(47, 45, 45); */
+    --main-color: #c7e4c8
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+
+#cursor {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 0, 0.5);
+
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-weight: 800;
+
+
+
+}
+
+/* 
+    very first we are styling th first div
+    the first refers to the class name
+*/
+.first {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+}
+
+.first > h1 {
+    font-size: 12vw;
+    overflow: hidden;
+    padding-left: 24px;
+    /*  padding matching with the padding of nav bar */
+}
+
+.first h1 span {
+    display: inline-block;
+}
+
+
+
+.video-div {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-div video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+    z-index: 11;
+
+
+
+}
+
+
+/*  second div */
+.second {
+    width: 100vw;
+    height: 150vh;
+    padding: 10vh 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.second > div{
+    width: 100%;
+    height: 100%;
+}
+.second > div > img {
+    width: 100%;
+    height: 100%;
+}
+.second > div h1{
+    font-size: 5vw;
+}
+.second > div p{
+    font-size: 1.5vw;
+    color: rgba(128, 128, 128, 0.3);
+}
+
+
+
+svg{
+    width: 100%;
+    height: 100px;
+}
+
+#container-for-loop-banner {
+    height: 20vh;
+    position: relative;
+    z-index: 99;
+}
+
+#move {
+    
+    background-color: rgb(234, 255, 0);
+    font-size: 32px;
+    display: flex;
+    /* height: 15vh; */
+    overflow: hidden;
+    width: 100vw;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    color: black;
+}
+
+#move i {
+    font-size: 70px;
+}
+
+#move>div {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    padding: 16px 1.5vw;
+
+    flex-shrink: 0;
+
+}
+.work-item{
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    height: 150svh;
+}
+.work-item-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 25%, 75% 40%, 100% 100%, 0% 100%);
+    will-change: clip-path;
+}
+
+.work-item-img img{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.work-item-name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.work-item-name h1{
+    /* text-transform: uppercase; */
+    text-align: center;
+    font-size: 3vw;
+    /* font-weight: 650; */
+    list-style: 1;
+    width: 60%;
+    margin: auto;
+
+
+
+}
+
+@media (max-width: 1000px) {
+    .work-item-name h1{
+        font-size: 2.5rem;
+    }
+}
+
+
+
+.third {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10vh 0;
+
+    /* border-top: 1px solid black; */
+    /* border-bottom: 1px solid black; */
+
+    background-color: #00382c;
+    color: white;
+
+}
+
+.third > div{
+    width: 40vw;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2vh 5vw;
+    overflow: hidden;
+}
+
+.third h1{
+    font-size: 3vw;
+    /* overflow: hidden; */
+    border: none;
+    overflow: hidden;
+}
+.third > div:first-child > p{
+    font-weight: bold;
+    display: inline-block;
+    margin: 4px 0;
+    /* border: 1px solid black; */
+}
+
+.third > div:first-child > div{
+    width:   100%;
+    height: 50%;
+    /* border: 1px solid black; */
+}
+.third > div:first-child > div > img{
+    width: 100%;
+    height: 100%;   
+    object-fit: contain;
+}
+
+.forth{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.forth img{
+    width: 100%;
+    height: 100%;
+}
+.forth h1{
+    font-size: 5vw;
+}
+.forth > div{
+    display: flex;
+    gap: 28px;
+    font-size: 1.4vw;
+    height: 150vh; 
+}
+
+
+.image-div-forth{
+    width: 50vw;
+    height: 100%;
+}
+
+.forth > div:nth-child(2){
+    justify-content: flex-end;
+}
+.para-div-forth{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    width: 24vw;
+
+}
+
+
+footer{
+    margin-top: 10vh;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #00382c;
+    color: white;
+
+    padding: 32px 24px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+
+    background-image: url(/images/footer-background-transparent.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+.footer-info{
+
+    display: flex;
+    gap: 16px;
+    font-size: 18px;
+}
+
+.footer-info > div{
+    width: 20%;
+}
+
+.footer-info > div h1{
+    font-size: 3vw;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-name{
+    font-size: 10vw;
+    text-align: center;
+
+    
+}
+
+.social-media{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.social-media >div {
+    font-size: 48px;
+}
