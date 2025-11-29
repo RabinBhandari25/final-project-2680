@@ -52,7 +52,7 @@ time1.from(".first h1 + h1 span", {
 
 //cursor
 
-document.addEventListener("pointermove", (event) => {
+document.addEventListener("mousemove", (event) => {
     gsap.to("#cursor", {
         x:  event.clientX,
         y: event.clientY,
@@ -291,7 +291,7 @@ allh1InThird.forEach( item =>{
         scrollTrigger: {
             trigger: ".third",
             start: "top 50%",
-            end: "center 40%",
+            end: "center 50%",
             scrub: true,
 
         }
@@ -305,7 +305,7 @@ allPInThird.forEach( item =>{
         scrollTrigger: {
             trigger: ".third",
             start: "top 50%",
-            end: "bottom 90%",
+            end: "center 50%",
             scrub: true,
 
         }

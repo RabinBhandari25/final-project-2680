@@ -13,6 +13,7 @@ if(document.querySelector(".first")){
     time22.to(".first",{
         height: "100vh",
     })
+
 }
 
 
