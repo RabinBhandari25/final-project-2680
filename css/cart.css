@@ -1,0 +1,24 @@
+body{
+    background-color: #d8cab8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 30vh;
+    font-size: 2vw;
+}
+
+.cart-item-row{
+    border: 1px solid black;
+    padding-left: 1vw;
+    padding-right: 5vw;
+    margin-bottom: 2vw;
+
+}
+
+button{
+    border: none;
+    padding: 1vw 2vw;
+    font-size: 2vw;
+    margin-top: 1vw;
+}

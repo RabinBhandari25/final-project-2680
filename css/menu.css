@@ -2,6 +2,29 @@ body{
     background-color: #d8cab8;
     box-sizing: border-box;
 }
+#cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    position: fixed;
+    z-index: 1 ;
+    top: 15vh;
+    right: 10px;
+}
+#cart i{
+    font-size: 300%;
+}
+
+#cart a{
+    text-decoration: none;
+    color: black;
+
+}
+
 .first{
     /* border: 1px solid black; */
     height: 80vh;
@@ -69,20 +92,89 @@ body{
 
 .each-item{
     width: 49%;
-    height: 100px;
+    height: 130px;
     outline: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 5px 10px;
+    padding: 10px 10px;
 }
 
 .each-item > div:first-child{
     font-weight: 600;
-    font-size: 1.2vw;
+    font-size: 1.3vw;}
+
+.each-item button{
+    border: none;
+    background-color: #d8cab8;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: self-start;
 }
 .item-description{
     width: 100%;
     display: flex;
     align-items: end;
 }
+
+
+footer{
+    margin-top: 10vh;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #00382c;
+    color: white;
+
+    padding: 32px 24px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+
+    background-image: url(/images/footer-background-transparent.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+.footer-info{
+
+    display: flex;
+    gap: 16px;
+    font-size: 18px;
+}
+
+.footer-info > div{
+    width: 20%;
+}
+
+.footer-info > div h1{
+    font-size: 3vw;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-name{
+    font-size: 10vw;
+    text-align: center;
+
+    
+}
+
+.social-media{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.social-media >div {
+    font-size: 48px;
+}
+

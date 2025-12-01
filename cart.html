@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/cart.css">
+    
     <title>Document</title>
 </head>
 <body>
+
+
+    <nav>
+        <h1>Everest Kitchen</h1>
+        <div><i class="fa-solid fa-list"></i></div>
+    </nav>
+    <div id="menu" class="blur">
+        <h4> <a href="index.html">HOME</a></h4>
+        <h4> <a href="menu.html">MENU</a></h4>
+        <h4>About</h4>
+        <h4>Gallery</h4>
+        <h4> <a href="aboutus.html">About Us</a></h4>
+
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+
     
-</body>
+      <main class="cart-page">
+        <h2>Your Cart</h2>
+    
+        <div id="cart-items"></div>
+        <h3>Total: CAD <span id="cart-total">0.00</span></h3>
+    
+        <button id="checkout-button">Pay with Card</button>
+      </main>
+    
+      <!-- Stripe.js -->
+      <script src="https://js.stripe.com/v3/"></script>
+      <script src="/js/cart.js"></script>
+    
+
+
+
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="./js/navAndMenu.js"></script>
+  </body>
 </html>

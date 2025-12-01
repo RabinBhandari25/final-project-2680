@@ -580,27 +580,6 @@ const menu = [
     },
   
     {
-      section: "Manchurian",
-      items: [
-        {
-          name: "Veg Manchurian with Gravy",
-          description: "Crispy vegetable balls in a spicy, tangy soy-based gravy.",
-          price: 17.0
-        },
-        {
-          name: "Gobi Manchurian with Gravy",
-          description: "Crispy cauliflower in a spicy, tangy soy-based gravy.",
-          price: 18.0
-        },
-        {
-          name: "Chicken Manchurian with Gravy",
-          description: "Crispy chicken in a spicy, tangy soy-based gravy.",
-          price: 18.0
-        }
-      ]
-    },
-  
-    {
       section: "Biryani",
       items: [
         {
@@ -671,63 +650,6 @@ const menu = [
         }
       ]
     },
-  
-    {
-      section: "Himalayan Signature Chilies",
-      items: [
-        {
-          name: "Honey Chili Potato",
-          description: "Crispy potatoes tossed in sweet and spicy honey chili sauce.",
-          price: 14.0
-        },
-        {
-          name: "Cajun Potato Fries",
-          description: "Fries seasoned with Cajun spices.",
-          price: 10.0
-        },
-        {
-          name: "Paneer Chili",
-          description: "Crispy paneer tossed in spicy Indo-Chinese chili sauce.",
-          price: 18.0
-        },
-        {
-          name: "Potato (Chips) Chili",
-          description: "Crispy potato chips tossed in chili sauce.",
-          price: 14.0
-        },
-        {
-          name: "Mushroom Chili",
-          description: "Crispy mushrooms tossed in spicy chili sauce.",
-          price: 16.0
-        },
-        {
-          name: "Soya Chaap Chili",
-          description: "Soya chaap pieces in spicy Indo-Chinese chili sauce.",
-          price: 18.0
-        },
-        {
-          name: "Fish Chili",
-          description: "Crispy fish tossed in spicy chili sauce.",
-          price: 20.0
-        },
-        {
-          name: "Chicken Chili",
-          description: "Crispy chicken tossed in spicy chili sauce.",
-          price: 20.0
-        },
-        {
-          name: "Prawn Chili",
-          description: "Crispy prawns tossed in spicy chili sauce.",
-          price: 23.0
-        },
-        {
-          name: "Chicken Lollipop",
-          description: "Frenched chicken wings cooked in Indo-Chinese style.",
-          price: 20.0
-        }
-      ]
-    },
-  
     {
       section: "Popular Nepali Specials",
       items: [
@@ -867,6 +789,11 @@ const menu = [
         eachItem.innerHTML = `
             <div>${item.name}</div>
             <div>CAD ${item.price}</div>
+             <button class="add-to-cart-btn"
+          data-name="${item.name}"
+          data-price="${item.price}">
+    Add to Cart
+  </button>
             <div class="item-description">${item.description}</div>
         `;
 
@@ -875,6 +802,38 @@ const menu = [
 
     menuElement.appendChild(section);
 });
+
+
+function getCart() {
+  return JSON.parse(localStorage.getItem("cart") || "[]");
+}
+
+function saveCart(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function addToCart(name, price) {
+  const cart = getCart();
+  const existing = cart.find(item => item.name === name);
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ name, price, quantity: 1 });
+  }
+
+  saveCart(cart);
+  alert(`${name} added to cart`);
+}
+
+document.querySelectorAll(".add-to-cart-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    addToCart(name, price);
+  });
+});
+
 
 
 
