@@ -27,7 +27,7 @@ nav a:visited{
 }
 .heading
 {
-    background-image:url("images/Everest.webp");
+    background-image:url("../images/Everest.webp");
     position: relative;
     overflow:hidden;
     background-size: cover;
