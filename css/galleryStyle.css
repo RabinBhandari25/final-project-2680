@@ -1,5 +1,5 @@
 :root {
-    --main-color: #c7e4c8
+    --main-color: #d8cab8
 }
 
 body {
@@ -27,8 +27,9 @@ nav a{
 nav a:visited{
     color:black;
 }
-.heading{
-    background-image:url("images/Everest.webp");
+.heading
+{
+    background-image:url("../images/Everest.webp");
     position: relative;
     overflow:hidden;
     background-size: cover;
@@ -37,6 +38,16 @@ nav a:visited{
     padding:20px 10px;
     font-size: 4vw;
     margin-bottom: 2vh;
+}
+.heading::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/Everest.webp");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;       
+    z-index: -1;
 }
 h1, h4{
     text-align: center;
@@ -87,26 +98,29 @@ h1, h4{
 }
 .gallery-grid
 {
-    columns:3;
-    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 .gallery-grid img
 {
     width:100%;
     margin-bottom: 20px;
     border-radius: 14px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
     transition:0.4s;
+    
 }
 .gallery-grid img:hover{
     transform:scale(1.05);
 }
-@media (max-width: 900px)
-{
-    .gallery-grid{columns:2;}
-}
-@media (max-width: 600px)
-{
-    .gallery-grid{columns:1;}
+.section span.active {
+    color: red;
+    border-bottom: 2px solid red;
 }
 .info-section {
     display: grid;
@@ -156,6 +170,71 @@ h1, h4{
 }
 .info-section
 {
-    background-color: #00382c;
+    background-color: #381d00;
     color: white;
 }
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    background: #fff;
+    padding: 24px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.lightbox-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.lightbox-content h2 {
+    margin: 8px 0;
+}
+
+.lightbox-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.lightbox-img-wrapper {
+    width: 100%;
+    max-height: 60vh;       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.lightbox-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;    
+}
+.lightbox-img-wrapper { max-height: 60vh; }
+.lightbox-img-wrapper img { object-fit: contain; }
+

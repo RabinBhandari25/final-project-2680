@@ -1,5 +1,5 @@
 :root {
-    --main-color: #c7e4c8
+    --main-color: #d8cab8
 }
 
 body {
@@ -150,6 +150,6 @@ h1, h4{
 }
 .info-section
 {
-    background-color: #00382c;
+    background-color: #381600;
     color: white;
 }
