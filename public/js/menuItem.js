@@ -5,7 +5,7 @@ const menu = [
       {
         name: "Himalayan Fries",
         description: "Regular fries seasoned with Nepali spices.",
-        price: 8.0
+        price: 1.0
       },
       {
         name: "Veg Spring Roll (6 pcs)",

@@ -8,7 +8,7 @@ function saveCart(cart) {
 
 function removeFromCart(name) {
   let cart = getCart();
-  cart = cart.filter(item => item.name !== name); // remove selected item
+  cart = cart.filter(item => item.name !== name); 
   saveCart(cart);
   renderCart(); // update UI
 }
@@ -17,6 +17,8 @@ function renderCart() {
   const cart = getCart();
   const container = document.getElementById("cart-items");
   const totalEl = document.getElementById("cart-total");
+
+  if (!container || !totalEl) return;
 
   container.innerHTML = "";
 
@@ -45,7 +47,6 @@ function renderCart() {
     container.appendChild(row);
   });
 
-  // Attach delete button events
   document.querySelectorAll(".delete-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const name = btn.dataset.name;
@@ -56,10 +57,46 @@ function renderCart() {
   totalEl.textContent = total.toFixed(2);
 }
 
-renderCart();
 
-document.getElementById("checkout-button").addEventListener("click", () => {
-  localStorage.clear();
-  alert("Payment done!");
+async function handleCheckout() {
+  const cart = getCart();
+
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  try {
+    const response = await fetch("/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ items: cart }), // send cart items to server
+    });
+
+    const data = await response.json();
+
+    if (data.url) {
+      // Redirect to Stripe Checkout page
+      window.location.href = data.url;
+    } else {
+      console.error("Stripe session error:", data);
+      alert("Could not start checkout. Please try again.");
+    }
+    localStorage.clear
+  } catch (err) {
+    console.error("Network or server error:", err);
+    alert("Error connecting to payment server.");
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
   renderCart();
+
+  const checkoutBtn = document.getElementById("checkout-button");
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", handleCheckout);
+  }
 });
