@@ -1,9 +1,31 @@
 body{
     background-color: #d8cab8;
     box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.cursor{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    position: fixed;
+  top: 50px;
+  left: 50px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+  font-weight: 600;
+  font-size: 1.2vw;
+
 }
 #cart{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80px;
@@ -53,7 +75,7 @@ body{
     display: flex;
     /* justify-content:center; */
     width: 100%;
-    padding: 16px;
+    /* padding: 16px; */
 
     outline: 1px solid black;
 
@@ -61,48 +83,57 @@ body{
 
 }
 .section-container{
-    width: 25%;
+    width: 35%;
+    height: 100%;
     font-size: 1.5vw;
     font-weight: 600;
 
     align-self: flex-start;
 
 
-    position: relative;
 
 }
 .section-container > div{
-    /* border: 1px solid black; */
 
-    position: absolute;
+   
+    position: sticky;
     top: 0;
-    z-index: 1;
+    left: 0;
 
     font-size: 2.2vw;
+    text-align: center;
 
 
 }
 
 .item-section{
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    /* gap: 16px; */
+
 }
 
 .each-item{
     width: 49%;
-    height: 130px;
-    outline: 1px solid black;
+    height: 150px;
+    border: 1px solid black;
+    margin-top: -1px;
+    margin-left: -1px;
     display: flex;
+    /* gap: 16px; */
     flex-wrap: wrap;
+
+
     justify-content: space-between;
-    padding: 10px 10px;
+    padding: 16px 18px;
+
+
 }
 
 .each-item > div:first-child{
     font-weight: 600;
-    font-size: 1.3vw;}
+    font-size: 1.2vw;}
 
 .each-item button{
     border: none;
@@ -116,7 +147,6 @@ body{
     display: flex;
     align-items: end;
 }
-
 
 footer{
     margin-top: 10vh;
