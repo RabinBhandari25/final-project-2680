@@ -34,6 +34,8 @@ Add this to the bottom of body
 
 STRIPE_SECRET_KEY= "sk_test_51SZ6TJJ44V7S8nis1hqWk709tisNTmjJ4s6eQcqDfJM52Ih1LowNsbTwdZA4cNYI8AOFt6Lm75cCsCu5WBfTagm600mMJEsfRa"
 
+npm install
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
