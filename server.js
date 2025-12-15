@@ -15,14 +15,13 @@ app.post("/create-checkout-session", async (req, res) => {
   try {
     const items = req.body.items || [];
 
-    // items example: [{ name: "Chicken Momo", price: 12.99, quantity: 2 }, ...]
     const lineItems = items.map(item => ({
       price_data: {
         currency: "cad",
         product_data: {
           name: item.name,
         },
-        unit_amount: Math.round(item.price * 100), // $12.99 => 1299 cents
+        unit_amount: Math.round(item.price * 100),
       },
       quantity: item.quantity,
     }));
@@ -31,7 +30,7 @@ app.post("/create-checkout-session", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: lineItems,
-      success_url: "http://localhost:3000/success.html",
+      success_url: "http://localhost:3000/index.html",
       cancel_url: "http://localhost:3000/cancel.html",
     });
 

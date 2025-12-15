@@ -72,13 +72,12 @@ async function handleCheckout() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ items: cart }), // send cart items to server
+      body: JSON.stringify({ items: cart }),
     });
 
     const data = await response.json();
 
     if (data.url) {
-      // Redirect to Stripe Checkout page
       window.location.href = data.url;
     } else {
       console.error("Stripe session error:", data);

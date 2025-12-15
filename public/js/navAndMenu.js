@@ -45,7 +45,6 @@ clossButton.addEventListener("click", ()=> {
 time22.pause()
 
 
-// adding a border on hover for nav bar
 var menuItems = document.querySelectorAll("#menu h4")
 
 menuItems.forEach((item) =>{
@@ -65,3 +64,35 @@ menuItems.forEach((item) =>{
     })
 
 })
+
+const resturantStatus = document.getElementById("open-status")
+
+function logRestaurantStatus() {
+    const now = new Date();
+    const day = now.getDay(); 
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+  
+    const currentTime = hour * 60 + minute;
+  
+    let openTime, closeTime;
+  
+    if (day >= 1 && day <= 5) {
+      openTime = 10 * 60;        
+      closeTime = 22 * 60;     
+
+    } else {
+      openTime = 10 * 60;        
+      closeTime = 12 * 60; 
+
+    }
+  
+    if (currentTime >= openTime && currentTime < closeTime) {
+        resturantStatus.innerHTML = "OPEN"
+    } else {
+        resturantStatus.innerHTML = "CLOSE"
+    }
+  }
+  
+  logRestaurantStatus();
+  

@@ -93,37 +93,6 @@ const menu = [
   },
 
   {
-    section: "Chef Signature",
-    items: [
-      {
-        name: "Butter Cheezy Fries",
-        description: "Fries topped with a rich buttery cheese sauce.",
-        price: 15.0
-      },
-      {
-        name: "Cauliflower Chilli",
-        description: "Crispy cauliflower tossed in spicy chili sauce with Indo-Chinese flavors.",
-        price: 16.0
-      },
-      {
-        name: "Mustang Fries",
-        description: "Fries tossed with spicy Mustang-style seasoning and sauce.",
-        price: 16.0
-      },
-      {
-        name: "Veg Drumstick Chilli",
-        description: "Veg drumsticks cooked in spicy chili sauce with vegetables.",
-        price: 20.0
-      },
-      {
-        name: "Veg Drumstick Mustang",
-        description: "Veg drumsticks tossed in your choice of Mustang-style sauces.",
-        price: 20.0
-      }
-    ]
-  },
-
-  {
     section: "Tandoori Dishes",
     items: [
       {
@@ -324,122 +293,6 @@ const menu = [
   },
 
   {
-    section: "Noodles",
-    items: [
-      // Nepali Chow Mein
-      {
-        name: "Nepali Chow Mein - Vegetable",
-        description: "Back home style Nepalese stir-fry chow mein with vegetables, Nepali herbs and spices.",
-        price: 16.0
-      },
-      {
-        name: "Nepali Chow Mein - Paneer",
-        description: "Nepalese chow mein with paneer and Nepali herbs and spices.",
-        price: 17.0
-      },
-      {
-        name: "Nepali Chow Mein - Egg",
-        description: "Nepalese chow mein with egg, vegetables, and Nepali spices.",
-        price: 17.0
-      },
-      {
-        name: "Nepali Chow Mein - Chicken",
-        description: "Nepalese chow mein with chicken and Nepali spices.",
-        price: 17.0
-      },
-      {
-        name: "Nepali Chow Mein - Prawn",
-        description: "Nepalese chow mein with prawns and Nepali spices.",
-        price: 20.0
-      },
-      {
-        name: "Nepali Chow Mein - Mixed Veg (Paneer/Mushroom)",
-        description: "Nepalese chow mein with mixed veg, paneer and/or mushroom.",
-        price: 20.0
-      },
-      {
-        name: "Nepali Chow Mein - Mixed Non-Veg",
-        description: "Nepalese chow mein with chicken, egg, and prawn.",
-        price: 20.0
-      },
-
-      // Singaporean Thin Noodles
-      {
-        name: "Singaporean Noodles - Vegetable",
-        description: "Thin noodles stir-fried with sauces, ginger, garlic, and vegetables.",
-        price: 16.0
-      },
-      {
-        name: "Singaporean Noodles - Paneer",
-        description: "Thin noodles stir-fried with paneer, sauces, ginger, and garlic.",
-        price: 17.0
-      },
-      {
-        name: "Singaporean Noodles - Egg",
-        description: "Thin noodles with egg, vegetables, and sauces.",
-        price: 17.0
-      },
-      {
-        name: "Singaporean Noodles - Chicken",
-        description: "Thin noodles with chicken, vegetables, and sauces.",
-        price: 17.0
-      },
-      {
-        name: "Singaporean Noodles - Prawn",
-        description: "Thin noodles with prawns, vegetables, and sauces.",
-        price: 20.0
-      },
-      {
-        name: "Singaporean Noodles - Mixed Veg (Paneer/Mushroom)",
-        description: "Thin noodles with mixed vegetables, paneer and/or mushroom.",
-        price: 20.0
-      },
-      {
-        name: "Singaporean Noodles - Mixed Non-Veg",
-        description: "Thin noodles with chicken, egg, and prawn.",
-        price: 20.0
-      },
-
-      // Schezwan Hakka (Thick)
-      {
-        name: "Schezwan Hakka Noodles - Vegetable",
-        description: "Thick noodles stir-fried with vegetables, Schezwan-style spices and sauces.",
-        price: 16.0
-      },
-      {
-        name: "Schezwan Hakka Noodles - Paneer",
-        description: "Thick noodles with paneer and Schezwan-style spices.",
-        price: 17.0
-      },
-      {
-        name: "Schezwan Hakka Noodles - Egg",
-        description: "Thick noodles with egg, vegetables, and Schezwan flavors.",
-        price: 17.0
-      },
-      {
-        name: "Schezwan Hakka Noodles - Chicken",
-        description: "Thick noodles with chicken, vegetables, and Schezwan flavors.",
-        price: 17.0
-      },
-      {
-        name: "Schezwan Hakka Noodles - Prawn",
-        description: "Thick noodles with prawns and Schezwan-style spices.",
-        price: 20.0
-      },
-      {
-        name: "Schezwan Hakka Noodles - Mixed Veg (Paneer/Mushroom)",
-        description: "Thick noodles with mixed veg, paneer and/or mushroom.",
-        price: 20.0
-      },
-      {
-        name: "Schezwan Hakka Noodles - Mixed Non-Veg",
-        description: "Thick noodles with chicken, egg, and prawn.",
-        price: 20.0
-      }
-    ]
-  },
-
-  {
     section: "Momo (Freshly Handmade Dumplings)",
     items: [
       // Steamed
@@ -528,83 +381,7 @@ const menu = [
     ]
   },
 
-  {
-    section: "Soup & Salad",
-    items: [
-      {
-        name: "Manchow Soup - Veg",
-        description: "Spicy Indo-Chinese vegetable soup with fried noodles.",
-        price: 13.0
-      },
-      {
-        name: "Manchow Soup - Chicken",
-        description: "Spicy Indo-Chinese chicken soup with fried noodles.",
-        price: 15.0
-      },
-      {
-        name: "Hot & Sour Soup - Veg",
-        description: "Hot and sour vegetable soup with Indo-Chinese flavors.",
-        price: 13.0
-      },
-      {
-        name: "Hot & Sour Soup - Chicken",
-        description: "Hot and sour chicken soup with Indo-Chinese flavors.",
-        price: 15.0
-      },
-      {
-        name: "Nepali Thukpa Soup - Veg",
-        description: "Traditional Nepali noodle soup with vegetables.",
-        price: 13.0
-      },
-      {
-        name: "Nepali Thukpa Soup - Chicken",
-        description: "Traditional Nepali noodle soup with chicken.",
-        price: 15.0
-      },
-      {
-        name: "Clear Soup - Veg",
-        description: "Light clear vegetable soup.",
-        price: 13.0
-      },
-      {
-        name: "Clear Soup - Chicken",
-        description: "Light clear chicken soup.",
-        price: 15.0
-      },
-      {
-        name: "Seasonal Green Salad",
-        description: "Fresh seasonal greens with house dressing.",
-        price: 10.0
-      }
-    ]
-  },
-
-  {
-    section: "Biryani",
-    items: [
-      {
-        name: "Vegetable Biryani",
-        description: "Saffron basmati rice cooked with vegetables, Himalayan gravy, and Nepali herbs and spices.",
-        price: 16.0
-      },
-      {
-        name: "Chicken Biryani",
-        description: "Saffron basmati rice cooked with chicken, Himalayan gravy, and Nepali herbs and spices.",
-        price: 18.0
-      },
-      {
-        name: "Lamb Biryani",
-        description: "Saffron basmati rice cooked with lamb, Himalayan gravy, and Nepali herbs and spices.",
-        price: 20.0
-      },
-      {
-        name: "Prawn Biryani",
-        description: "Saffron basmati rice cooked with prawns, Himalayan gravy, and Nepali herbs and spices.",
-        price: 22.0
-      }
-    ]
-  },
-
+ 
   {
     section: "Fried Rice",
     items: [
@@ -869,4 +646,23 @@ gsap.to(".cursor",{
   ease: "elastic.out(1.75,0.3)",
 
 })
+})
+
+
+
+
+
+const sectionContainers = document.getElementsByClassName("section-container")
+
+Array.from(sectionContainers).forEach( (sectionHeader, index )=> {
+
+  sectionHeader.addEventListener('mouseenter', ()=> {
+    console.log("first")
+    cursor.innerHTML = `<img src="images/hover${index+1}.avif" alt="">`
+    console.log("second")
+
+  })
+  sectionHeader.addEventListener('mouseleave', ()=> {
+    cursor.innerHTML = " "
+  })
 })
